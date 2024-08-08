@@ -1,0 +1,395 @@
+:root {
+  --yellow: #f9c74f;
+  --black: #333;
+  --green: #2a9d8f;
+  --title: #555;
+  --main: #222;
+  --nav-color: #ffffff;
+  --button-color: #007bff;
+  --button-hover: #0056b3;
+  --button-active: #003d7a;
+  --skills: #017afd;
+  --border-radius: 8px;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-dark: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #f0f4f8;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; 
+  color: var(--black);
+}
+
+p {
+  font-size: 1.3rem;
+  color: var(--title);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-color);
+  padding: 0 1.5rem;
+  height: 5rem;
+  box-shadow: var(--shadow-light);
+}
+
+header img {
+  width: 3.5rem; 
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; 
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--main);
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--button-color);
+}
+
+.hamburger {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main Section */
+#main-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto; 
+  width: 85%;
+}
+
+.avatar img {
+  width: 220px; 
+  border-radius: 50%;
+  box-shadow: var(--shadow-dark); 
+}
+
+.avatar h2 {
+  text-align: center;
+  color: var(--title);
+  font-size: 2.2rem; 
+  padding: 0.5rem;
+}
+
+.About {
+  width: 65%;
+}
+
+.para {
+  padding-bottom: 1.2rem; 
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+}
+
+.social .btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--button-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-light); 
+}
+
+.social .btn:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.social .btn:active {
+  background-color: var(--button-active);
+}
+
+.social i {
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+/* Skills Section */
+#skills {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+#skills h1 {
+  text-align: center;
+  color: var(--skills);
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: var(--yellow);
+  padding: 2rem; 
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-dark); 
+  width: calc(33.333% - 2rem);
+  transition: transform 0.3s ease; 
+}
+
+.skill-item:hover {
+  transform: scale(1.05); 
+}
+
+.skill-item h2 {
+  margin-top: 1.5rem; 
+}
+
+.icon {
+  font-size: 3.5rem; 
+  color: var(--black);
+}
+
+/* Footer */
+#footer-container {
+  background-color: var(--black);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem; 
+  box-shadow: var(--shadow-light); 
+}
+
+#footer-container img {
+  width: 2.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 575px) {
+  .hamburger {
+      display: block;
+  }
+
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 0.75rem; 
+  }
+
+  #main-section {
+      flex-direction: column;
+      width: 90%;
+  }
+
+  .avatar img {
+      width: 180px;
+  }
+
+  .About {
+      width: 100%;
+      text-align: justify;
+  }
+
+  .skills-container {
+      flex-direction: column;
+      width: 90%;
+  }
+
+  .skill-item {
+      width: 80%;
+  }
+}
+/* Additional styling for Java skill item */
+.skill-item {
+  background-color: var(--yellow);
+  padding: 2rem; 
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-dark); 
+  width: calc(25% - 2rem); 
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-item h2 {
+  margin-top: 1.5rem; 
+}
+
+.icon {
+  font-size: 3.5rem; 
+  color: var(--black);
+}
+/* Container for the Hire Me button */
+.hire-me {
+  text-align: center; 
+  margin-top: 3rem; 
+}
+
+.hire-me-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--button-color);
+  padding: 1rem 2rem; 
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-light); 
+}
+
+.hire-me-btn:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.hire-me-btn:active {
+  background-color: var(--button-active);
+}
+/* Repositories Section */
+#repositories {
+  background-color: #ffffff; 
+  padding: 3rem 0; 
+}
+
+#repositories h1 {
+  text-align: center;
+  color: var(--skills); 
+  margin-bottom: 2rem; 
+}
+
+.repositories-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem; 
+}
+
+.repository-item {
+  background-color: var(--yellow); 
+  padding: 2rem; 
+  text-align: center;
+  border-radius: var(--border-radius); 
+  box-shadow: var(--shadow-dark); 
+  width: calc(33.333% - 2rem); 
+  transition: transform 0.3s ease; 
+}
+
+.repository-item:hover {
+  transform: scale(1.05); 
+}
+
+.repository-item h2 {
+  margin-top: 1.5rem; 
+}
+
+.repo-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--button-color); 
+  padding: 0.75rem 1.5rem; 
+  border-radius: var(--border-radius); 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-light); 
+}
+
+.repo-btn:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.repo-btn:active {
+  background-color: var(--button-active);
+}
+
+.icon {
+  font-size: 3.5rem; 
+  color: var(--black); 
+}
+/* Header Navigation Button Styles */
+.nav-links li a.hire-me-nav {
+  background-color: var(--button-color); 
+  padding: 0.75rem 1.5rem; 
+  border-radius: var(--border-radius); 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block; 
+  margin-left: auto; 
+}
+
+.nav-links li a.hire-me-nav:hover {
+  background-color: var(--button-hover); 
+  transform: scale(1.05); 
+}
+
+.nav-links li a.hire-me-nav:active {
+  background-color: var(--button-active); 
+}
+
+/* Adjustments for mobile view */
+@media screen and (max-width: 575px) {
+  .nav-links.show li a.hire-me-nav {
+    padding: 1rem; 
+  }
+}
